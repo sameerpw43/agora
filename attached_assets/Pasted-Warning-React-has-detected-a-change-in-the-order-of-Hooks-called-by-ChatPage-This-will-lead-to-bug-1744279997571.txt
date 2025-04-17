@@ -1,0 +1,177 @@
+Warning: React has detected a change in the order of Hooks called by ChatPage. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://reactjs.org/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useContext                 useContext
+2. useContext                 useContext
+3. useSyncExternalStore       useSyncExternalStore
+4. useRef                     useRef
+5. useInsertionEffect         useInsertionEffect
+6. useState                   useState
+7. useState                   useState
+8. useEffect                  useEffect
+9. useState                   useState
+10. useEffect                 useEffect
+11. useState                  useState
+12. useState                  useState
+13. useState                  useState
+14. useState                  useState
+15. undefined                 useContext
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    at ChatPage (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/pages/chat-page.tsx:35:25)
+    at Route (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=f06d1c04:323:16)
+    at ProtectedRoute (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/lib/protected-route.tsx:22:3)
+    at Switch (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=f06d1c04:379:17)
+    at App (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/App.tsx?v=QlqQj0aDj9--kzfpxrj94:27:3)
+    at AuthProvider (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/hooks/use-auth.tsx?v=QlqQj0aDj9--kzfpxrj94:26:32)
+    at QueryClientProvider (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=f06d1c04:2805:3)
+printWarning @ chunk-RPCDYKBN.js?v=f06d1c04:521
+error @ chunk-RPCDYKBN.js?v=f06d1c04:505
+warnOnHookMismatchInDev @ chunk-RPCDYKBN.js?v=f06d1c04:11495
+updateHookTypesDev @ chunk-RPCDYKBN.js?v=f06d1c04:11465
+useContext @ chunk-RPCDYKBN.js?v=f06d1c04:12697
+useContext @ chunk-QCHXOAYK.js?v=f06d1c04:1062
+useQueryClient @ @tanstack_react-query.js?v=f06d1c04:2795
+useBaseQuery @ @tanstack_react-query.js?v=f06d1c04:2999
+useQuery @ @tanstack_react-query.js?v=f06d1c04:3068
+ChatPage @ chat-page.tsx:88
+renderWithHooks @ chunk-RPCDYKBN.js?v=f06d1c04:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=f06d1c04:14582
+beginWork @ chunk-RPCDYKBN.js?v=f06d1c04:15924
+beginWork$1 @ chunk-RPCDYKBN.js?v=f06d1c04:19753
+performUnitOfWork @ chunk-RPCDYKBN.js?v=f06d1c04:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=f06d1c04:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=f06d1c04:19116
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=f06d1c04:18678
+workLoop @ chunk-RPCDYKBN.js?v=f06d1c04:197
+flushWork @ chunk-RPCDYKBN.js?v=f06d1c04:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=f06d1c04:384Understand this errorAI
+chunk-RPCDYKBN.js?v=f06d1c04:11678 Uncaught Error: Rendered more hooks than during the previous render.
+    at updateWorkInProgressHook (chunk-RPCDYKBN.js?v=f06d1c04:11678:21)
+    at updateEffectImpl (chunk-RPCDYKBN.js?v=f06d1c04:12074:22)
+    at updateEffect (chunk-RPCDYKBN.js?v=f06d1c04:12099:18)
+    at Object.useEffect (chunk-RPCDYKBN.js?v=f06d1c04:12703:22)
+    at Object.useEffect (chunk-QCHXOAYK.js?v=f06d1c04:1078:29)
+    at useClearResetErrorBoundary (@tanstack_react-query.js?v=f06d1c04:2871:10)
+    at useBaseQuery (@tanstack_react-query.js?v=f06d1c04:3010:3)
+    at useQuery (@tanstack_react-query.js?v=f06d1c04:3068:10)
+    at ChatPage (chat-page.tsx:88:58)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=f06d1c04:11548:26)
+updateWorkInProgressHook @ chunk-RPCDYKBN.js?v=f06d1c04:11678
+updateEffectImpl @ chunk-RPCDYKBN.js?v=f06d1c04:12074
+updateEffect @ chunk-RPCDYKBN.js?v=f06d1c04:12099
+useEffect @ chunk-RPCDYKBN.js?v=f06d1c04:12703
+useEffect @ chunk-QCHXOAYK.js?v=f06d1c04:1078
+useClearResetErrorBoundary @ @tanstack_react-query.js?v=f06d1c04:2871
+useBaseQuery @ @tanstack_react-query.js?v=f06d1c04:3010
+useQuery @ @tanstack_react-query.js?v=f06d1c04:3068
+ChatPage @ chat-page.tsx:88
+renderWithHooks @ chunk-RPCDYKBN.js?v=f06d1c04:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=f06d1c04:14582
+beginWork @ chunk-RPCDYKBN.js?v=f06d1c04:15924
+callCallback2 @ chunk-RPCDYKBN.js?v=f06d1c04:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=f06d1c04:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=f06d1c04:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=f06d1c04:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=f06d1c04:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=f06d1c04:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=f06d1c04:19116
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=f06d1c04:18678
+workLoop @ chunk-RPCDYKBN.js?v=f06d1c04:197
+flushWork @ chunk-RPCDYKBN.js?v=f06d1c04:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=f06d1c04:384Understand this errorAI
+chunk-RPCDYKBN.js?v=f06d1c04:11678 Uncaught Error: Rendered more hooks than during the previous render.
+    at updateWorkInProgressHook (chunk-RPCDYKBN.js?v=f06d1c04:11678:21)
+    at updateEffectImpl (chunk-RPCDYKBN.js?v=f06d1c04:12074:22)
+    at updateEffect (chunk-RPCDYKBN.js?v=f06d1c04:12099:18)
+    at Object.useEffect (chunk-RPCDYKBN.js?v=f06d1c04:12703:22)
+    at Object.useEffect (chunk-QCHXOAYK.js?v=f06d1c04:1078:29)
+    at useClearResetErrorBoundary (@tanstack_react-query.js?v=f06d1c04:2871:10)
+    at useBaseQuery (@tanstack_react-query.js?v=f06d1c04:3010:3)
+    at useQuery (@tanstack_react-query.js?v=f06d1c04:3068:10)
+    at ChatPage (chat-page.tsx:88:58)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=f06d1c04:11548:26)
+updateWorkInProgressHook @ chunk-RPCDYKBN.js?v=f06d1c04:11678
+updateEffectImpl @ chunk-RPCDYKBN.js?v=f06d1c04:12074
+updateEffect @ chunk-RPCDYKBN.js?v=f06d1c04:12099
+useEffect @ chunk-RPCDYKBN.js?v=f06d1c04:12703
+useEffect @ chunk-QCHXOAYK.js?v=f06d1c04:1078
+useClearResetErrorBoundary @ @tanstack_react-query.js?v=f06d1c04:2871
+useBaseQuery @ @tanstack_react-query.js?v=f06d1c04:3010
+useQuery @ @tanstack_react-query.js?v=f06d1c04:3068
+ChatPage @ chat-page.tsx:88
+renderWithHooks @ chunk-RPCDYKBN.js?v=f06d1c04:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=f06d1c04:14582
+beginWork @ chunk-RPCDYKBN.js?v=f06d1c04:15924
+callCallback2 @ chunk-RPCDYKBN.js?v=f06d1c04:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=f06d1c04:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=f06d1c04:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=f06d1c04:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=f06d1c04:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=f06d1c04:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=f06d1c04:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=f06d1c04:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=f06d1c04:18684
+workLoop @ chunk-RPCDYKBN.js?v=f06d1c04:197
+flushWork @ chunk-RPCDYKBN.js?v=f06d1c04:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=f06d1c04:384Understand this errorAI
+chunk-RPCDYKBN.js?v=f06d1c04:14032 The above error occurred in the <ChatPage> component:
+
+    at ChatPage (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/pages/chat-page.tsx:35:25)
+    at Route (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=f06d1c04:323:16)
+    at ProtectedRoute (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/lib/protected-route.tsx:22:3)
+    at Switch (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=f06d1c04:379:17)
+    at App (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/App.tsx?v=QlqQj0aDj9--kzfpxrj94:27:3)
+    at AuthProvider (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/src/hooks/use-auth.tsx?v=QlqQj0aDj9--kzfpxrj94:26:32)
+    at QueryClientProvider (https://9243bed4-cc20-421a-8db1-d3313a33e5ee-00-2gpjac3y16zpf.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=f06d1c04:2805:3)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+logCapturedError @ chunk-RPCDYKBN.js?v=f06d1c04:14032
+update.callback @ chunk-RPCDYKBN.js?v=f06d1c04:14052
+callCallback @ chunk-RPCDYKBN.js?v=f06d1c04:11248
+commitUpdateQueue @ chunk-RPCDYKBN.js?v=f06d1c04:11265
+commitLayoutEffectOnFiber @ chunk-RPCDYKBN.js?v=f06d1c04:17093
+commitLayoutMountEffects_complete @ chunk-RPCDYKBN.js?v=f06d1c04:17980
+commitLayoutEffects_begin @ chunk-RPCDYKBN.js?v=f06d1c04:17969
+commitLayoutEffects @ chunk-RPCDYKBN.js?v=f06d1c04:17920
+commitRootImpl @ chunk-RPCDYKBN.js?v=f06d1c04:19353
+commitRoot @ chunk-RPCDYKBN.js?v=f06d1c04:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=f06d1c04:18760
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=f06d1c04:18718
+workLoop @ chunk-RPCDYKBN.js?v=f06d1c04:197
+flushWork @ chunk-RPCDYKBN.js?v=f06d1c04:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=f06d1c04:384Understand this errorAI
+chunk-RPCDYKBN.js?v=f06d1c04:11678 Uncaught Error: Rendered more hooks than during the previous render.
+    at updateWorkInProgressHook (chunk-RPCDYKBN.js?v=f06d1c04:11678:21)
+    at updateEffectImpl (chunk-RPCDYKBN.js?v=f06d1c04:12074:22)
+    at updateEffect (chunk-RPCDYKBN.js?v=f06d1c04:12099:18)
+    at Object.useEffect (chunk-RPCDYKBN.js?v=f06d1c04:12703:22)
+    at Object.useEffect (chunk-QCHXOAYK.js?v=f06d1c04:1078:29)
+    at useClearResetErrorBoundary (@tanstack_react-query.js?v=f06d1c04:2871:10)
+    at useBaseQuery (@tanstack_react-query.js?v=f06d1c04:3010:3)
+    at useQuery (@tanstack_react-query.js?v=f06d1c04:3068:10)
+    at ChatPage (chat-page.tsx:88:58)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=f06d1c04:11548:26)
+updateWorkInProgressHook @ chunk-RPCDYKBN.js?v=f06d1c04:11678
+updateEffectImpl @ chunk-RPCDYKBN.js?v=f06d1c04:12074
+updateEffect @ chunk-RPCDYKBN.js?v=f06d1c04:12099
+useEffect @ chunk-RPCDYKBN.js?v=f06d1c04:12703
+useEffect @ chunk-QCHXOAYK.js?v=f06d1c04:1078
+useClearResetErrorBoundary @ @tanstack_react-query.js?v=f06d1c04:2871
+useBaseQuery @ @tanstack_react-query.js?v=f06d1c04:3010
+useQuery @ @tanstack_react-query.js?v=f06d1c04:3068
+ChatPage @ chat-page.tsx:88
+renderWithHooks @ chunk-RPCDYKBN.js?v=f06d1c04:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=f06d1c04:14582
+beginWork @ chunk-RPCDYKBN.js?v=f06d1c04:15924
+beginWork$1 @ chunk-RPCDYKBN.js?v=f06d1c04:19753
+performUnitOfWork @ chunk-RPCDYKBN.js?v=f06d1c04:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=f06d1c04:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=f06d1c04:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=f06d1c04:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=f06d1c04:18684
+workLoop @ chunk-RPCDYKBN.js?v=f06d1c04:197
+flushWork @ chunk-RPCDYKBN.js?v=f06d1c04:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=f06d1c04:384
